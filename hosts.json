@@ -18,9 +18,9 @@
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/list-extended.txt"
   },
   {
-    "name": "list-extended.txt",
+    "name": "list-general.txt",
     "description": "Общие списки",
     "hash": "a10824678b8bd520ba9835effb9f0cf7224b75ff9fb8cf49c77c6b9c328b9be6",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/list-general.txt"
-  },
+  }
 ]
