@@ -1,7 +1,7 @@
 [
   {
     "name": "default_strategy.txt",
-    "description": "Домены YouTube",
+    "description": "Стадартная стратегия",
     "author": "zaprett-devs",
     "hash": "14d06cb8cb012f96789de44143e724cd44320f42ac6b5abc9dd6aea3994a6deb",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/default_strategy.txt"
