@@ -54,6 +54,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: "Автообновление хэшей стратегий и листов"
-        file_pattern: |
-          strategies.json
-          hosts.json
+        file_pattern: 'hosts.json strategies.json'
