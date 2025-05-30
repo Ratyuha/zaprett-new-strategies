@@ -19,28 +19,19 @@ jobs:
       run: |
         set -e
         BRANCH="${GITHUB_REF##*/}"
-
-        # Функции для работы с хэшами и URL
         calc_hash() { sha256sum "$1" | awk '{print $1}'; }
         make_url() { echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BRANCH}/$1"; }
-
-        # Обход файлов в папках
         process_files() {
           local folder="$1"
           local pattern="$2"
           local json="$3"
-          
           find "$folder" -name "$pattern" -type f | while read -r file; do
             filename=$(basename "$file")
-            
-            # Обновление существующей записи
             if jq -e --arg name "$filename" '.[] | select(.name == $name)' "$json" >/dev/null; then
               hash=$(calc_hash "$file")
               jq --arg name "$filename" --arg hash "$hash" '
                 map(if .name == $name then .hash = $hash else . end)
               ' "$json" > tmp.json && mv tmp.json "$json"
-            
-            # Добавление новой записи
             else
               hash=$(calc_hash "$file")
               url=$(make_url "$file")
@@ -56,16 +47,10 @@ jobs:
             fi
           done
         }
-
-        # Обрабатываем стратегии и листы
         process_files "strategies" "strategy-*.txt" "strategies.json"
         process_files "lists" "list-*.txt" "hosts.json"
-
-        # Удаление записей для отсутствующих файлов
         for json in hosts.json strategies.json; do
           [ -f "$json" ] || continue
-          
-          # Определяем папку и шаблон для каждого JSON
           case "$json" in
             "hosts.json")
               folder="lists"
@@ -76,11 +61,7 @@ jobs:
               pattern="strategy-*.txt"
               ;;
           esac
-
-          # Получаем актуальные имена файлов
           existing_files=$(find "$folder" -name "$pattern" -type f -exec basename {} \; 2>/dev/null || true)
-
-          # Фильтруем JSON
           jq --arg existing "$existing_files" '
             map(select(.name as $n | ($existing | split("\n") | index($n))))
           ' "$json" > tmp.json && mv tmp.json "$json"
