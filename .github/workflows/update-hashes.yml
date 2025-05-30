@@ -58,8 +58,8 @@ jobs:
             url: $url
           }]
         ' "$json" > tmp.json && mv tmp.json "$json"
-      fi
-    done
+  fi
+done
 
     - name: Show diff
       run: git diff
