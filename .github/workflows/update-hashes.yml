@@ -47,8 +47,8 @@ jobs:
               jq --arg name "$filename" --arg hash "$hash" --arg url "$url" '
                 . + [{
                   name: $name,
-                  author: null,
-                  description: null,
+                  author: "не указано",
+                  description: "не указано",
                   hash: $hash,
                   url: $url
                 }]
