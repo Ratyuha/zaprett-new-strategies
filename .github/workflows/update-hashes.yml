@@ -47,7 +47,9 @@ jobs:
         process_json hashes_hosts.csv hosts.json
 
         rm -f hashes_*.csv
-
+    - name: Show diff
+      run: git diff
+      
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
