@@ -26,12 +26,5 @@
     "author": "zaprett-devs",
     "hash": "7842d706e609bc8dac42eb89a84e913e520e6262c4c7922de2664710c1ff4283",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-general.txt"
-  },
-  {
-    "name": "list-test.txt",
-    "author": "не указано",
-    "description": "не указано",
-    "hash": "1cea553f6f623a22adacc296b7e6e65dad1e94a69507b638d82d5f08e9ef5296",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/lists/list-test.txt"
   }
 ]
