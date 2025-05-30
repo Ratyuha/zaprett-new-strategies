@@ -33,7 +33,7 @@ jobs:
         process_json() {
           local csv_file=$1
           local json_file=$2
-          [ -f "$csv_file" ] || return 0  # Пропускаем если CSV пуст
+          [ -f "$csv_file" ] || return 0
           
           jq -Rn --slurpfile json "$json_file" '
             [$json[0][] | {key: .name, value: .hash}] | from_entries as $old |
@@ -54,5 +54,4 @@ jobs:
         commit_message: "Автообновление хэшей стратегий и листов"
         file_pattern: |
           strategies.json
-          host
-          s.json
+          hosts.json
