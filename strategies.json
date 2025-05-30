@@ -75,5 +75,12 @@
     "description": "Стратегия mgts2 из репозитория zapret для Windows",
     "hash": "b97bec2294b093228116ddf3fd1367fb4c8f8111561f87241487882d3ed0ac81",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategy-mgts2.txt"
+  },
+  {
+    "name": "strategy-test.txt",
+    "author": null,
+    "description": null,
+    "hash": "6a184c0b1c02374ab89d90a1f9d3cdabde4e02ca8939027d8801b1355573d47f",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategy-test.txt"
   }
 ]
