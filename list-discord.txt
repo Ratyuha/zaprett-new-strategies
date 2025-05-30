@@ -4,3 +4,4 @@ discord.gg
 discord.media
 discordapp.com
 discordapp.net
+dis.gd
