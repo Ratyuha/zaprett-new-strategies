@@ -15,38 +15,52 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Calculate SHA256 hashes
-      run: |
-        for file in strategy-*.txt list-*.txt; do
-          if [ -f "$file" ]; then
-            case "$file" in
-              strategy-*)
-                echo "$file,$(sha256sum "$file" | awk '{print $1}')" >> hashes_strategies.csv
-                ;;
-              list-*)
-                echo "$file,$(sha256sum "$file" | awk '{print $1}')" >> hashes_hosts.csv
-                ;;
-            esac
-          fi
-        done
+    - name: Update hashes and add new entries
+  run: |
+    set -e
 
-        process_json() {
-          local csv_file=$1
-          local json_file=$2
-          [ -f "$csv_file" ] || return 0
-          
-          jq -Rn --slurpfile json "$json_file" '
-            [$json[0][] | {key: .name, value: .hash}] | from_entries as $old |
-            [inputs | split(",") | {key: .[0], value: .[1]}] | from_entries as $new |
-            $json[0] | map(.hash = ($new[.name] // .hash))
-          ' "$csv_file" > updated.json
-          mv updated.json "$json_file"
-        }
+    BRANCH="${GITHUB_REF##*/}"
 
-        process_json hashes_strategies.csv strategies.json
-        process_json hashes_hosts.csv hosts.json
+    calc_hash() {
+      sha256sum "$1" | awk '{print $1}'
+    }
 
-        rm -f hashes_*.csv
+    make_url() {
+      local file="$1"
+      echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BRANCH}/${file}"
+    }
+
+    for file in strategy-*.txt list-*.txt; do
+      [ -f "$file" ] || continue
+
+      if [[ "$file" == strategy-* ]]; then
+        json="strategies.json"
+      elif [[ "$file" == list-* ]]; then
+        json="hosts.json"
+      else
+        continue
+      fi
+
+      if jq -e --arg name "$file" '.[] | select(.name == $name)' "$json" > /dev/null; then
+        hash=$(calc_hash "$file")
+        jq --arg name "$file" --arg hash "$hash" '
+          map(if .name == $name then .hash = $hash else . end)
+        ' "$json" > tmp.json && mv tmp.json "$json"
+      else
+        hash=$(calc_hash "$file")
+        url=$(make_url "$file")
+        jq --arg name "$file" --arg hash "$hash" --arg url "$url" '
+          . + [{
+            name: $name,
+            author: null,
+            description: null,
+            hash: $hash,
+            url: $url
+          }]
+        ' "$json" > tmp.json && mv tmp.json "$json"
+      fi
+    done
+
     - name: Show diff
       run: git diff
       
