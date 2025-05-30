@@ -15,50 +15,63 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Update hashes and add new entries
+    - name: Update hashes and clean entries
       run: |
         set -e
 
         BRANCH="${GITHUB_REF##*/}"
 
-        calc_hash() {
-          sha256sum "$1" | awk '{print $1}'
-        }
+        # Функции для работы с хэшами и URL
+        calc_hash() { sha256sum "$1" | awk '{print $1}'; }
+        make_url() { echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BRANCH}/$1"; }
 
-        make_url() {
-          local file="$1"
-          echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BRANCH}/${file}"
-        }
-
+        # Обновление хэшей и добавление новых записей
         for file in strategy-*.txt list-*.txt; do
           [ -f "$file" ] || continue
 
+          # Определяем целевой JSON
           if [[ "$file" == strategy-* ]]; then
             json="strategies.json"
-          elif [[ "$file" == list-* ]]; then
-            json="hosts.json"
           else
-            continue
+            json="hosts.json"
           fi
 
-          if jq -e --arg name "$file" '.[] | select(.name == $name)' "$json" > /dev/null; then
+          # Обновление существующей записи
+          if jq -e --arg name "$file" '.[] | select(.name == $name)' "$json" >/dev/null; then
             hash=$(calc_hash "$file")
             jq --arg name "$file" --arg hash "$hash" '
               map(if .name == $name then .hash = $hash else . end)
             ' "$json" > tmp.json && mv tmp.json "$json"
+
+          # Добавление новой записи
           else
             hash=$(calc_hash "$file")
             url=$(make_url "$file")
             jq --arg name "$file" --arg hash "$hash" --arg url "$url" '
-              . + [{
-                name: $name,
-                author: null,
-                description: null,
-                hash: $hash,
-                url: $url
-              }]
+              . + [{name: $name, author: null, description: null, hash: $hash, url: $url}]
             ' "$json" > tmp.json && mv tmp.json "$json"
           fi
+        done
+
+        # Удаление записей для отсутствующих файлов
+        for json in hosts.json strategies.json; do
+          [ -f "$json" ] || continue
+
+          # Получаем список файлов, которые должны быть
+          pattern=$(
+            case "$json" in
+              "hosts.json") echo "list-*.txt" ;;
+              "strategies.json") echo "strategy-*.txt" ;;
+            esac
+          )
+
+          # Собираем актуальные имена файлов
+          existing_files=$(ls $pattern 2>/dev/null || true)
+
+          # Фильтруем JSON, оставляя только существующие файлы
+          jq --arg existing "$existing_files" '
+            map(select(.name as $n | ($existing | split("\n") | index($n))))
+          ' "$json" > tmp.json && mv tmp.json "$json"
         done
 
     - name: Show diff
@@ -67,5 +80,5 @@ jobs:
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "Автообновление хэшей стратегий и листов"
+        commit_message: "Автообновление: хэши, новые записи, очистка"
         file_pattern: 'hosts.json strategies.json'
