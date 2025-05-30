@@ -20,7 +20,7 @@ jobs:
         set -e
         BRANCH="${GITHUB_REF##*/}"
         calc_hash() { sha256sum "$1" | awk '{print $1}'; }
-        make_url() { echo "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/${BRANCH}/$1"; }
+        make_url() { echo "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/$1"; }
         process_files() {
           local folder="$1"
           local pattern="$2"
