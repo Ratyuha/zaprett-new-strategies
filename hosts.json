@@ -10,7 +10,7 @@
     "name": "list-discord.txt",
     "description": "Домены Discord",
     "author": "zaprett-devs",
-    "hash": "825b39d97896508fde47a80551a1ab4a2146de3f83e8d8b366857a78203cf99e",
+    "hash": "13a60977a4b6fe0fd053bab4a8f3c73790ce20ea5eedc6eb788b56d8431a0e9a",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/list-discord.txt"
   },
   {
@@ -24,7 +24,7 @@
     "name": "list-general.txt",
     "description": "Общие списки",
     "author": "zaprett-devs",
-    "hash": "a10824678b8bd520ba9835effb9f0cf7224b75ff9fb8cf49c77c6b9c328b9be6",
+    "hash": "7842d706e609bc8dac42eb89a84e913e520e6262c4c7922de2664710c1ff4283",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/list-general.txt"
   }
 ]
