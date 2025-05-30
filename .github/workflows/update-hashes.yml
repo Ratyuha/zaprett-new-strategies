@@ -16,54 +16,54 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Update hashes and add new entries
-  run: |
-    set -e
+      run: |
+        set -e
 
-    BRANCH="${GITHUB_REF##*/}"
+        BRANCH="${GITHUB_REF##*/}"
 
-    calc_hash() {
-      sha256sum "$1" | awk '{print $1}'
-    }
+        calc_hash() {
+          sha256sum "$1" | awk '{print $1}'
+        }
 
-    make_url() {
-      local file="$1"
-      echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BRANCH}/${file}"
-    }
+        make_url() {
+          local file="$1"
+          echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BRANCH}/${file}"
+        }
 
-    for file in strategy-*.txt list-*.txt; do
-      [ -f "$file" ] || continue
+        for file in strategy-*.txt list-*.txt; do
+          [ -f "$file" ] || continue
 
-      if [[ "$file" == strategy-* ]]; then
-        json="strategies.json"
-      elif [[ "$file" == list-* ]]; then
-        json="hosts.json"
-      else
-        continue
-      fi
+          if [[ "$file" == strategy-* ]]; then
+            json="strategies.json"
+          elif [[ "$file" == list-* ]]; then
+            json="hosts.json"
+          else
+            continue
+          fi
 
-      if jq -e --arg name "$file" '.[] | select(.name == $name)' "$json" > /dev/null; then
-        hash=$(calc_hash "$file")
-        jq --arg name "$file" --arg hash "$hash" '
-          map(if .name == $name then .hash = $hash else . end)
-        ' "$json" > tmp.json && mv tmp.json "$json"
-      else
-        hash=$(calc_hash "$file")
-        url=$(make_url "$file")
-        jq --arg name "$file" --arg hash "$hash" --arg url "$url" '
-          . + [{
-            name: $name,
-            author: null,
-            description: null,
-            hash: $hash,
-            url: $url
-          }]
-        ' "$json" > tmp.json && mv tmp.json "$json"
-  fi
-done
+          if jq -e --arg name "$file" '.[] | select(.name == $name)' "$json" > /dev/null; then
+            hash=$(calc_hash "$file")
+            jq --arg name "$file" --arg hash "$hash" '
+              map(if .name == $name then .hash = $hash else . end)
+            ' "$json" > tmp.json && mv tmp.json "$json"
+          else
+            hash=$(calc_hash "$file")
+            url=$(make_url "$file")
+            jq --arg name "$file" --arg hash "$hash" --arg url "$url" '
+              . + [{
+                name: $name,
+                author: null,
+                description: null,
+                hash: $hash,
+                url: $url
+              }]
+            ' "$json" > tmp.json && mv tmp.json "$json"
+          fi
+        done
 
     - name: Show diff
       run: git diff
-      
+
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
