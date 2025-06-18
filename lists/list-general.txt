@@ -34,3 +34,4 @@ matrix-client.matrix.org
 vector.im
 scalar.vector.im
 element.io
+twimg.com
