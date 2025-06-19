@@ -35,3 +35,9 @@ vector.im
 scalar.vector.im
 element.io
 twimg.com
+pbs.twimg.com
+video.twimg.com
+co.itsv1eds.ru
+co.eepy.today
+co.otomir23.me
+cobalt.255x.ru
