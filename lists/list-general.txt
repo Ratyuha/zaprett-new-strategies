@@ -45,7 +45,7 @@ geometrydash.com
 boomlings.com
 www.boomlings.com
 robtopgames.com
-*.ng.blaze.io
+ng.blaze.io
 newgrounds.com
 ncs.io
 signin.aws.amazon.com
