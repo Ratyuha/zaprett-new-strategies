@@ -82,5 +82,12 @@
     "description": "Стратегия alt6 из репозитория zapret для Windows",
     "hash": "888a74285624447a5c4efb32f23451be57a5947044ad3897b06e24a150ced9b2",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/strategy-alt6.txt"
+  },
+  {
+    "name": "strategy-shizapret-port.txt",
+    "author": "sch-izo (Портировал dotFelixan)",
+    "description": "Стратегия shizapret из репозитория sch-izo/shizapret для Windows",
+    "hash": "fb83d692c8cc23b1acf6dc1eaa1fb5b5ba2a2bd8247c3ed58e15beae6b242277",
+    "url": "https://raw.githubusercontent.com/dotFelixan/zaprett-shizapret-port/main/strategies/strategy-shizapret-port.txt"
   }
 ]
