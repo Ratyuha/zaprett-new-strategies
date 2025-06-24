@@ -87,7 +87,7 @@
     "name": "strategy-shizapret-port.txt",
     "author": "sch-izo (Портировал dotFelixan)",
     "description": "Стратегия shizapret из репозитория sch-izo/shizapret для Windows",
-    "hash": "?",
+    "hash": "fb83d692c8cc23b1acf6dc1eaa1fb5b5ba2a2bd8247c3ed58e15beae6b242277",
     "url": "https://raw.githubusercontent.com/dotFelixan/zaprett-shizapret-port/main/strategies/strategy-shizapret-port.txt"
   }
 ]
