@@ -5,7 +5,7 @@
     "description": "Стандартная стратегия",
     "hash": "d0a87151c5fae7d10c36127906c92a599806e21948b9327b5b4928a9e09c1d07",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/strategy-default.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/nfqws/strategy-default.txt"
   },
   {
     "name": "strategy-alt.txt",
@@ -13,7 +13,7 @@
     "description": "Стратегия alt из репозитория zapret для Windows",
     "hash": "cc5978f85bbffbf3737904a9afa603d86984772d526031ef2f21b5e5d49982ed",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-alt.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-alt.txt"
   },
   {
     "name": "strategy-alt2.txt",
@@ -21,7 +21,7 @@
     "description": "Стратегия alt2 из репозитория zapret для Windows",
     "hash": "0414a113fd41b5bac48d252c031b6612851836da4b1eea3d0690184019cc6dec",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-alt2.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-alt2.txt"
   },
   {
     "name": "strategy-alt3.txt",
@@ -29,7 +29,7 @@
     "description": "Стратегия alt3 из репозитория zapret для Windows",
     "hash": "2f75eed8e378cf185c2a836c82c79588d425b129024a70f72143e589fe5a0198",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-alt3.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-alt3.txt"
   },
   {
     "name": "strategy-alt4.txt",
@@ -37,7 +37,7 @@
     "description": "Стратегия alt4 из репозитория zapret для Windows",
     "hash": "2d4a0c7296bd75015217ecf4bd4a6cde7fa49d39ddc26763924fe7ca19258202",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-alt4.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-alt4.txt"
   },
   {
     "name": "strategy-alt5.txt",
@@ -45,7 +45,7 @@
     "description": "Стратегия alt5 из репозитория zapret для Windows",
     "hash": "338937fd22e473f3af83f9c13cba6ad9c99bd62ad0d6d6d41d0d7213dd21a374",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-alt5.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-alt5.txt"
   },
   {
     "name": "strategy-alt6.txt",
@@ -53,7 +53,7 @@
     "description": "Стратегия alt6 из репозитория zapret для Windows",
     "hash": "888a74285624447a5c4efb32f23451be57a5947044ad3897b06e24a150ced9b2",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/strategy-alt6.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/nfqws/strategy-alt6.txt"
   },
   {
     "name": "strategy-fake-tls-mod.txt",
@@ -61,7 +61,7 @@
     "description": "Стратегия fake-tls-mod из репозитория zapret для Windows",
     "hash": "0fec459e4c2e748316afe8b1b402ace3ed1ceec5c33aec268611366ebe99e0e5",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-fake-tls-mod.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-fake-tls-mod.txt"
   },
   {
     "name": "strategy-fake-tls-mod-alt.txt",
@@ -69,7 +69,7 @@
     "description": "Стратегия fake-tls-mod-alt из репозитория zapret для Windows",
     "hash": "631d3caaa1b5d23942eb230fa39cc788df176d70207ea186e4e123007f0ca702",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-fake-tls-mod-alt.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-fake-tls-mod-alt.txt"
   },
   {
     "name": "strategy-fake-tls-mod-auto.txt",
@@ -77,7 +77,7 @@
     "description": "Стратегия fake-tls-mod-auto из репозитория zapret для Windows",
     "hash": "8c4789458e903b40e9c62cb21c9ac132e587da4e7445ba84f42461e32efa275b",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-fake-tls-mod-auto.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-fake-tls-mod-auto.txt"
   },
   {
     "name": "strategy-mgts.txt",
@@ -85,7 +85,7 @@
     "description": "Стратегия mgts из репозитория zapret для Windows",
     "hash": "b3579957beb9017d21a17567843985ab72e621fe736b3d26ac51dbb78f96a387",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-mgts.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-mgts.txt"
   },
   {
     "name": "strategy-mgts2.txt",
@@ -93,7 +93,7 @@
     "description": "Стратегия mgts2 из репозитория zapret для Windows",
     "hash": "b97bec2294b093228116ddf3fd1367fb4c8f8111561f87241487882d3ed0ac81",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/strategy-mgts2.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/strategies/nfqws/strategy-mgts2.txt"
   },
   {
     "name": "strategy-shizapret-port.txt",
@@ -101,14 +101,14 @@
     "description": "Стратегия shizapret из репозитория sch-izo/shizapret для Windows",
     "hash": "fb83d692c8cc23b1acf6dc1eaa1fb5b5ba2a2bd8247c3ed58e15beae6b242277",
     "type": "nfqws",
-    "url": "https://raw.githubusercontent.com/dotFelixan/zaprett-shizapret-port/main/strategies/strategy-shizapret-port.txt"
+    "url": "https://raw.githubusercontent.com/dotFelixan/zaprett-shizapret-port/main/strategies/nfqws/strategy-shizapret-port.txt"
   },
   {
-    "name": "strategy-test.txt",
+    "name": "strategy-default.txt",
     "author": "zaprett-devs",
-    "description": "Тестовая стратегия",
+    "description": "Стандартная стратегия",
     "hash": "6deeed3cd73b77bb4b60e277a1b29ccb2e0a003cf3a8973698d65e94e8a13f87",
     "type": "byedpi",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/strategy-test.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/byedpi/strategy-default.txt"
   }
 ]
