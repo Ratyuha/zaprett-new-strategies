@@ -142,3 +142,6 @@ venus.web.telegram.org
 aurora.web.telegram.org
 vesta.web.telegram.org
 flora.web.telegram.org
+onlinesim.io
+onlinesim.space
+onlinesim.club
