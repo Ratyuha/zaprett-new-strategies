@@ -145,3 +145,4 @@ flora.web.telegram.org
 onlinesim.io
 onlinesim.space
 onlinesim.club
+zaprett.xyz
