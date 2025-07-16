@@ -1,4 +1,4 @@
-# zaprett-repo
+# zaprett-hosts-repo
 
 ## Зачем нужен данный репозиторий?
 * Для хранения списков доменов, которые можно скачивать из [приложения](https://github.com/CherretGit/zaprett-app)
