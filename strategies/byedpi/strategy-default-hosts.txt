@@ -1,0 +1,1 @@
+$hostlist -o 2 --auto=t,r,a,s -d 2
