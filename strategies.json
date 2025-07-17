@@ -108,6 +108,7 @@
     "author": "zaprett-devs",
     "description": "Стандартная стратегия",
     "hash": "ccd75ee624219157dde160a4b66f64bec576ca3f0e83052ff9be9befd9e12ca2",
+    "type": "byedpi",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/byedpi/strategy-default-hosts.txt"
   }
 ]
