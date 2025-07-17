@@ -104,17 +104,9 @@
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/nfqws/strategy-shizapret-port.txt"
   },
   {
-    "name": "strategy-default.txt",
+    "name": "strategy-default-hosts.txt",
     "author": "zaprett-devs",
     "description": "Стандартная стратегия",
-    "hash": "d0a87151c5fae7d10c36127906c92a599806e21948b9327b5b4928a9e09c1d07",
-    "type": "byedpi",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/byedpi/strategy-default.txt"
-  },
-  {
-    "name": "strategy-default-hosts.txt",
-    "author": "не указано",
-    "description": "не указано",
     "hash": "ccd75ee624219157dde160a4b66f64bec576ca3f0e83052ff9be9befd9e12ca2",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/byedpi/strategy-default-hosts.txt"
   }
