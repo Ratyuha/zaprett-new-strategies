@@ -25,10 +25,58 @@
   },
   {
     "name": "list-general.txt",
-    "description": "Общие списки",
+    "description": "Общие домены",
     "author": "zaprett-devs",
-    "hash": "24674625d34ac5a2bd88abe9f014b5a2bbfe67c3e0e92bb39a49b14a8b33828d",
+    "hash": "fea1ff8c0e54fba7f58de7d2a0db602343420b5e78762131df2a21a57d2361b4",
     "type": "list",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-general.txt"
+  },
+  {
+    "name": "list-cloudflare.txt",
+    "description": "Домены Cloudflare",
+    "author": "zaprett-devs",
+    "hash": "243458a980b1762033e565fb339dc7f29c4dccb2f74a035e1bd7bb796e6446c6",
+    "type": "list",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-cloudflare.txt"
+  },
+  {
+    "name": "list-matrix.txt",
+    "description": "Домены Matrix",
+    "author": "zaprett-devs",
+    "hash": "2739bb45739e156fc6941a1ced55709fa7045ade6963fe81273d84a873eae058",
+    "type": "list",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-matrix.txt"
+  },
+  {
+    "name": "list-rutracker.txt",
+    "description": "Домены RuTracker",
+    "author": "zaprett-devs",
+    "hash": "e0c7c084443a57ced68e6a1d7af6a4695e2dd6e3f24c09090ac9a91fec2f10b2",
+    "type": "list",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-rutracker.txt"
+  },
+  {
+    "name": "list-soundcloud.txt",
+    "description": "Домены SoundCloud",
+    "author": "zaprett-devs",
+    "hash": "35283c16bc8083d879f169847dea833d349ee10235d622c430590c1474b64913",
+    "type": "list",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-soundcloud.txt"
+  },
+  {
+    "name": "list-telegram.txt",
+    "description": "Домены Telegram",
+    "author": "zaprett-devs",
+    "hash": "6d32e07d17e698a8bb9d563367e73d1f8431038d2379577cfeaa2e2e4ec7f7c3",
+    "type": "list",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-telegram.txt"
+  },
+  {
+    "name": "list-twitter.txt",
+    "description": "Домены Twitter",
+    "author": "zaprett-devs",
+    "hash": "7c13100f5ca74b32f085d2cc1b990d95109211cee2fca06c2858560fc3e8793b",
+    "type": "list",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-twitter.txt"
   }
 ]
