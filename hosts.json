@@ -78,5 +78,13 @@
     "hash": "7c13100f5ca74b32f085d2cc1b990d95109211cee2fca06c2858560fc3e8793b",
     "type": "list",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-twitter.txt"
+  },
+  {
+    "name": "list-exclude-general.txt",
+    "author": "не указано",
+    "description": "не указано",
+    "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "type": "list_exclude",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/lists/exclude/list-exclude-general.txt"
   }
 ]
