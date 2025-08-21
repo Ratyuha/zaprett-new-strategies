@@ -5,7 +5,8 @@ on:
     paths:
       - 'strategies/byedpi/strategy-*.txt'
       - 'strategies/nfqws/strategy-*.txt'
-      - 'lists/list-*.txt'
+      - 'lists/include/list-*.txt'
+      - 'lists/exclude/list-*.txt'
 
 jobs:
   update-hashes:
@@ -19,15 +20,20 @@ jobs:
     - name: Update hashes and clean entries
       run: |
         set -e
-        BRANCH="${GITHUB_REF##*/}"
         calc_hash() { sha256sum "$1" | awk '{print $1}'; }
-        make_url() { echo "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/$1"; }
+        make_url() { echo "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/$1"; }
         process_files() {
           local folder="$1"
           local pattern="$2"
           local json="$3"
           find "$folder" -name "$pattern" -type f | while read -r file; do
             filename=$(basename "$file")
+            dir=$(basename "$(dirname "$file")")
+            if [ "$dir" = "exclude" ]; then
+              type="list_exclude"
+            else
+              type="$dir"
+            fi
             if jq -e --arg name "$filename" '.[] | select(.name == $name)' "$json" >/dev/null; then
               hash=$(calc_hash "$file")
               jq --arg name "$filename" --arg hash "$hash" '
@@ -36,12 +42,13 @@ jobs:
             else
               hash=$(calc_hash "$file")
               url=$(make_url "$file")
-              jq --arg name "$filename" --arg hash "$hash" --arg url "$url" '
+              jq --arg name "$filename" --arg hash "$hash" --arg url "$url" --arg type "$type" '
                 . + [{
                   name: $name,
                   author: "не указано",
                   description: "не указано",
                   hash: $hash,
+                  type: $type,
                   url: $url
                 }]
               ' "$json" > tmp.json && mv tmp.json "$json"
@@ -62,9 +69,9 @@ jobs:
               pattern="strategy-*.txt"
               ;;
           esac
-          existing_files=$(find "$folder" -name "$pattern" -type f -exec basename {} \; 2>/dev/null || true)
-          jq --arg existing "$existing_files" '
-            map(select(.name as $n | ($existing | split("\n") | index($n))))
+          existing_files=$(find "$folder" -name "$pattern" -type f -exec basename {} \;)
+          jq --argjson existing "$(printf '%s\n' $existing_files | jq -R -s 'split("\n")[:-1]')" '
+            map(select(.name as $n | $existing | index($n)))
           ' "$json" > tmp.json && mv tmp.json "$json"
         done
 
@@ -76,3 +83,4 @@ jobs:
       with:
         commit_message: "Автообновление: хэши, новые записи, очистка"
         file_pattern: 'hosts.json strategies.json'
+
