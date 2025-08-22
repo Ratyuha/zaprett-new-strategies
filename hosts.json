@@ -5,7 +5,7 @@
     "author": "zaprett-devs",
     "hash": "6ca6b2bac1c7ca3e06a1d8ca0c68da4f11ee233d2d6a4c6be9c6848238b7fc72",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-youtube.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-youtube.txt"
   },
   {
     "name": "list-discord.txt",
@@ -13,7 +13,7 @@
     "author": "zaprett-devs",
     "hash": "13a60977a4b6fe0fd053bab4a8f3c73790ce20ea5eedc6eb788b56d8431a0e9a",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-discord.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-discord.txt"
   },
   {
     "name": "list-extended.txt",
@@ -21,7 +21,7 @@
     "author": "zaprett-devs",
     "hash": "5c7e12310342a89d1aa69afc00f46c17d10d261790c5e029a83cc0c498fb148a",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-extended.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-extended.txt"
   },
   {
     "name": "list-general.txt",
@@ -29,7 +29,7 @@
     "author": "zaprett-devs",
     "hash": "1d7ecd63c90042f9b519c411dd20e57f05c8cc383092f03829b79ce6296c2824",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-general.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-general.txt"
   },
   {
     "name": "list-cloudflare.txt",
@@ -37,7 +37,7 @@
     "author": "zaprett-devs",
     "hash": "243458a980b1762033e565fb339dc7f29c4dccb2f74a035e1bd7bb796e6446c6",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-cloudflare.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-cloudflare.txt"
   },
   {
     "name": "list-matrix.txt",
@@ -45,7 +45,7 @@
     "author": "zaprett-devs",
     "hash": "2739bb45739e156fc6941a1ced55709fa7045ade6963fe81273d84a873eae058",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-matrix.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-matrix.txt"
   },
   {
     "name": "list-rutracker.txt",
@@ -53,7 +53,7 @@
     "author": "zaprett-devs",
     "hash": "e0c7c084443a57ced68e6a1d7af6a4695e2dd6e3f24c09090ac9a91fec2f10b2",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-rutracker.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-rutracker.txt"
   },
   {
     "name": "list-soundcloud.txt",
@@ -61,7 +61,7 @@
     "author": "zaprett-devs",
     "hash": "35283c16bc8083d879f169847dea833d349ee10235d622c430590c1474b64913",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-soundcloud.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-soundcloud.txt"
   },
   {
     "name": "list-telegram.txt",
@@ -69,7 +69,7 @@
     "author": "zaprett-devs",
     "hash": "6d32e07d17e698a8bb9d563367e73d1f8431038d2379577cfeaa2e2e4ec7f7c3",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-telegram.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-telegram.txt"
   },
   {
     "name": "list-twitter.txt",
@@ -77,12 +77,12 @@
     "author": "zaprett-devs",
     "hash": "7c13100f5ca74b32f085d2cc1b990d95109211cee2fca06c2858560fc3e8793b",
     "type": "list",
-    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/refs/heads/main/lists/list-twitter.txt"
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/refs/heads/main/lists/list-twitter.txt"
   },
   {
     "name": "list-exclude-general.txt",
-    "author": "не указано",
-    "description": "не указано",
+    "author": "zaprett-devs and our community",
+    "description": "Общие домены для черного списка",
     "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
     "type": "list_exclude",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/lists/exclude/list-exclude-general.txt"
