@@ -86,5 +86,13 @@
     "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
     "type": "list_exclude",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/lists/exclude/list-exclude-general.txt"
+  },
+  {
+    "name": "list-meta-services.txt",
+    "author": "не указано",
+    "description": "не указано",
+    "hash": "e14376ee40c95f479ac33d89c7f091e5842764185b2aa5a94c21b2a5bb641c78",
+    "type": "include",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/lists/include/list-meta-services.txt"
   }
 ]
