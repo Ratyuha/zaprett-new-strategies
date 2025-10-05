@@ -39,3 +39,4 @@ zaprett.xyz
 z.stakean.xyz
 mailru.proItch.io
 github.com
+aur.archlinux.org
