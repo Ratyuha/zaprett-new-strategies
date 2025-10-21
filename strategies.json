@@ -110,5 +110,37 @@
     "hash": "ccd75ee624219157dde160a4b66f64bec576ca3f0e83052ff9be9befd9e12ca2",
     "type": "byedpi",
     "url": "https://raw.githubusercontent.com/CherretGit/zaprett-hosts-repo/main/strategies/byedpi/strategy-default-hosts.txt"
+  },
+  {
+    "name": "strategy-alt7.txt",
+    "author": "не указано",
+    "description": "не указано",
+    "hash": "8e0326a677ecc288651018610d2be8002f916290ca7eb30387e035dac020707d",
+    "type": "nfqws",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/strategies/nfqws/strategy-alt7.txt"
+  },
+  {
+    "name": "strategy-alt8.txt",
+    "author": "не указано",
+    "description": "не указано",
+    "hash": "136e9a85f5ac2b084411a3911ed8e411173859db6b0b8114955aa4682d469164",
+    "type": "nfqws",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/strategies/nfqws/strategy-alt8.txt"
+  },
+  {
+    "name": "strategy-simple-fake.txt",
+    "author": "не указано",
+    "description": "не указано",
+    "hash": "5396ae3ff48358788d4a7b0b298bd30b1c45cfb7d24ace2b3eeccb40ebb5348d",
+    "type": "nfqws",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/strategies/nfqws/strategy-simple-fake.txt"
+  },
+  {
+    "name": "strategy-simple-fake-alt.txt",
+    "author": "не указано",
+    "description": "не указано",
+    "hash": "c43d5af0253a65541c0a5abb013b23ef53e853637a94635b066aa6fe8da69fe8",
+    "type": "nfqws",
+    "url": "https://raw.githubusercontent.com/CherretGit/zaprett-repo/main/strategies/nfqws/strategy-simple-fake-alt.txt"
   }
 ]
